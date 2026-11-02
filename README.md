@@ -40,7 +40,7 @@ Everything is built up from a small set of gates, with transistor counts kept as
 | NAND | 2 |
 | NOR | 2 |
 | XOR (four NANDs) | 8 |
-| Full adder | 23 |
+| Full adder | 18 |
  
 Key choices:
 - **NAND-based XOR** instead of an AND/OR construction, to avoid voltage drops through the transistors. Used 8 NAND gates to implement XOR.
@@ -76,12 +76,15 @@ Testing Board Used for easily reading inputs and outputs before design was fully
 
 ## Photos and Schematics
  A full block diagram of the structure of the ALU.
+
 ![Block diagram](images/block_diagram.png)
 
 The NAND logic behind one block of the 4-bit ripple carry adder.
+
 ![4-bit XOR Adder](images/adder.png)
 
 Resistor and Transistor Logic behind the different logic gates used. The OR gate implementation was only use once when the voltage drop across the transistor wouldn't cause any errors.
+
 ![Resistor Transistor Logic](images/RTL_logic.png)
 
 ## What I Learned
