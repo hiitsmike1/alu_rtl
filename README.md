@@ -4,7 +4,7 @@ A 4-bit arithmetic logic unit built entirely from discrete NPN transistors and r
  
 **Website:** https://hiitsmike1.github.io/michaelcrandall.github.io/
  
-![The completed ALU on breadboards](images/alu_photo.png)
+![The completed ALU on breadboards](images/circuit.png)
  
 ## Overview
  
@@ -29,7 +29,7 @@ The ALU performs seven operations on two 4-bit inputs and places the selected re
 | [110]  | SUB | `A - B` (two's complement: `A + ~B + 1`)  |
  
 ## Design
- 
+![DC Power Supply Current Draw](images/current.png)
 ### Gate library
  
 Everything is built up from a small set of gates, with transistor counts kept as low as I could get them:
@@ -75,7 +75,9 @@ One specifc error I ran into was near the end of the project. I had tested the o
 ## Photos and Schematics
  
 ![Block diagram](images/block_diagram.png)
- 
+![4-bit XOR Adder](images/adder.png)
+![Resistor Transistor Logic](images/RTL_logic.png)
+
 ## What I Learned
  
 
