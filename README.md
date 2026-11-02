@@ -28,8 +28,7 @@ The ALU performs seven operations on two 4-bit inputs and places the selected re
 | [101]  | ADD | `A + B` |
 | [110]  | SUB | `A - B` (two's complement: `A + ~B + 1`)  |
  
-## Design
-![DC Power Supply Current Draw](images/current.png)
+
 ### Gate library
  
 Everything is built up from a small set of gates, with transistor counts kept as low as I could get them:
@@ -46,6 +45,10 @@ Key choices:
 - **NAND-based XOR** instead of an AND/OR construction, to avoid voltage drops through the transistors. Used 8 NAND gates to implement XOR.
 - **AND and OR built as NAND/NOR followed by a NOT**, which restores a clean logic level at each stage.
 - **A separate 10 kΩ base resistor for every transistor.** A seperate resistor allows for a cleaner voltage as a more predictable current comes out of it.
+
+![DC Power Supply Current Draw](images/current.png)
+
+Overall, it draws 0.116 Amps of current when no inputs are changing. This is the downside to using BJT transistors compared to MOSFETS, as they draw a small amount of current to turn on the transistor. MOSFETS draws practically 0 current and rely on voltage instead, but need more complicated designs to implement the same gates.
 ### Arithmetic
  
 Four full adders form a ripple-carry adder. Subtraction reuses the same adders by inverting `B` and setting the carry-in to 1 (`A + ~B + 1`). The `B` inversion uses one NAND-based XOR per bit, and the carry-in control uses a small 2-transistor OR gate with the SUB op-code and carry-in.
@@ -88,7 +91,9 @@ Resistor and Transistor Logic behind the different logic gates used. The OR gate
 ![Resistor Transistor Logic](images/RTL_logic.png)
 
 ## What I Learned
- 
+From this project, I learned the basics of transistor logic. I learned how to use them as switches and how to implement logic gates with them. I also developed a understanding of boolean logic as well as how to simplify circuits. I had to learn how binary arithmetic works, such as full adders, subtractors, carry bits, and logical operations.
+
+I also developed hardware skills too. Since I had to implement it on a breadboard, I had to deal with debugging and troubleshooting using equipment like a multimeter. I also enchanced my skills in wiring and orginization as the project went on.
 
  
 ## Repository Structure
