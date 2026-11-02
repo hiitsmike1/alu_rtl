@@ -72,10 +72,16 @@ One specifc error I ran into was near the end of the project. I had tested the o
 
 ![Testing Board](images/test_board.png)
 
+Testing Board Used for easily reading inputs and outputs before design was fully implemented.
+
 ## Photos and Schematics
- 
+ A full block diagram of the structure of the ALU.
 ![Block diagram](images/block_diagram.png)
+
+The NAND logic behind one block of the 4-bit ripple carry adder.
 ![4-bit XOR Adder](images/adder.png)
+
+Resistor and Transistor Logic behind the different logic gates used. The OR gate implementation was only use once when the voltage drop across the transistor wouldn't cause any errors.
 ![Resistor Transistor Logic](images/RTL_logic.png)
 
 ## What I Learned
